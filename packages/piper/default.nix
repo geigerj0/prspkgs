@@ -6,7 +6,9 @@
   buildGoModule,
   fetchFromGitHub
 }: lib.warn ''
-    The repository for this package will be archived on 2026-12-31, see
+    ⚠️ This package has flaky tests. You may need to rerun the build several times.
+
+    ⚠️ The repository for this package will be archived on 2026-12-31, see
     <https://github.com/SAP/jenkins-library/blob/f1663c2d50b7229f7c12a8bb8b74f94d6c6fcc4a/README.md?plain=1#L1-L3>.
 ''
     buildGoModule rec {
