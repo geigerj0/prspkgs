@@ -13,15 +13,17 @@
 ''
     buildGoModule rec {
       pname = "Piper";
-      version = "1.494.0";
+      version = "1.495.0";
 
       src = fetchFromGitHub {
         owner = "SAP";
         repo = "jenkins-library";
-        rev = "v${version}";
-        hash = "sha256-s7NLDbPKz8ZeaIF+XumK+SFn0fcRJacCG7IiqNHuaAg=";
+        # Use precise id to be robust against re-tagging;
+        # rev = "v${version}";
+        rev = "f1663c2d50b7229f7c12a8bb8b74f94d6c6fcc4a";
+        hash = "sha256-a6kRhp5SYJdl+Cn2ueTGqRLATgnChDVQsSpWtO+oUJo=";
       };
-      vendorHash = "sha256-hBXsTd3L64H4lbys5DjR0Uv03fsObMX0brx2ueYBwmw=";
+      vendorHash = "sha256-hWEoUX0dCF+BqrLGRdIZxGFa78XVal2F8KjklNGJ+Tc=";
 
       ldflags = [
         "-s"
