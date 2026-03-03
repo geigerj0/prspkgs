@@ -18,6 +18,7 @@
         lib = nixpkgs.lib;
         callPkgContext = nixpkgs // {
           inherit supportedSystems;
+          inherit system;
         };
         callPackage = lib.customisation.callPackageWith callPkgContext;
       in {

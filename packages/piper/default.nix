@@ -1,5 +1,6 @@
 {
   supportedSystems,
+  system,
 
   lib,
 
@@ -23,7 +24,10 @@
         rev = "f1663c2d50b7229f7c12a8bb8b74f94d6c6fcc4a";
         hash = "sha256-a6kRhp5SYJdl+Cn2ueTGqRLATgnChDVQsSpWtO+oUJo=";
       };
-      vendorHash = "sha256-hWEoUX0dCF+BqrLGRdIZxGFa78XVal2F8KjklNGJ+Tc=";
+      vendorHash = {
+        aarch64-darwin = "sha256-hWEoUX0dCF+BqrLGRdIZxGFa78XVal2F8KjklNGJ+Tc=";
+        x86_64-linux = "sha256-eyDhvrATb2d6EH/KxGiKjMLUFhze/VKXPwcE63VNwOg=";
+      }.${system};
 
       ldflags = [
         "-s"
