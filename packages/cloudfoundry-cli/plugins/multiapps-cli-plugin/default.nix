@@ -7,15 +7,15 @@
   fetchFromGitHub
 }: buildGoModule rec {
   pname = "CF Deploy Plugin";
-  version = "3.9.0";
+  version = "3.11.1";
 
   src = fetchFromGitHub {
     owner = "cloudfoundry";
     repo = "multiapps-cli-plugin";
     rev = "v${version}";
-    hash = "sha256-OrhRaimqOWOBdkVjwGVd3K5wnoz7WY04kHMVi/XptJA=";
+    hash = "sha256-yKDFootkizkUexi644ubEsLm+f5ps/VRFTimhVnKhv8=";
   };
-  vendorHash = "sha256-MKAEmW3ox5T6L88dc41FAfLZRKp6EQnbfd7YWAy7KGY=";
+  vendorHash = "sha256-MKAEmW3ox5T6L88dc41FAfLZRKp6EQnbfd7YWAy7KGY";
 
   env.CGO_ENABLED = 0;
   ldflags = ["-w -X main.Version=${version}"];
