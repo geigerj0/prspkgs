@@ -31,9 +31,7 @@
         packages = {
           cloud-mta-build-tool = callPackage ./packages/cloud-mta-build-tool {};
           multiapps-cli-plugin = callPackage ./packages/cloudfoundry-cli/plugins/multiapps-cli-plugin {};
-          piper = callPackage ./packages/piper {}; # {
-          #   buildGoModule = nixpkgs.pkgs.pkgsStatic.buildGoModule;
-          # };
+          piper = callPackage ./packages/piper {};
         };
       });
 }
