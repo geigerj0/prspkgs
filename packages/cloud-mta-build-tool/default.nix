@@ -21,6 +21,11 @@
 
   doCheck = false;
 
+  preBuild = ''
+    printf 'cli_version: %s\nmakefile_version: 0.0.1\n' "${version}" > configs/version.yaml
+    go generate ./generator.go
+  '';
+
   postInstall = ''
     pushd "''${out}/bin" &> /dev/null
     ln --symbolic 'cloud-mta-build-tool' 'mbt'
